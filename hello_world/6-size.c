@@ -1,4 +1,4 @@
-include < stdio.h >
+#include <stdio.h>
 
 /**
 *main - Empty point
@@ -8,8 +8,8 @@ int main(void)
 {
 	char _char;
 	int _int;
-	long_int _long_int;
-	longlong_int _longlong_int;
+	long int _long_int;
+	long long int _longlong_int;
 	float _float;
 
 	printf("Size of a char: %zu byte(s)\n", sizeof(_char));
@@ -17,6 +17,6 @@ int main(void)
 	printf("Size of a long int: %zu byte(s)\n", sizeof(_long_int));
 	printf("Size of a long long int: %zu byte(s)\n", sizeof(_longlong_int));
 	printf("Size of a float: %zu byte(s)\n", sizeof(_float));
-	Return(0);
+        return(0);
 }
 
