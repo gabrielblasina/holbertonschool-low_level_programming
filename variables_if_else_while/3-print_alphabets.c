@@ -4,21 +4,20 @@
  *Return: Always 0 (Success)
  */
 int main(void)
-{
-	char abc;
-
-	for (abc = 'a'; abc <= 'z'; abc++)
 	{
-		putchar (abc);
+		char abc;
 
-	}
-	if (abc >= 'z')
-	{
-		for (abc = 'A' ; abc <= 'Z' ; abc++)
-		{
-			putchar (abc);
+		for (abc = 'a'; abc <= 'z'; abc++)
+			{
+				putchar (abc);
+			}
+		if (abc >= 'z')
+			{
+				for (abc = 'A' ; abc <= 'Z' ; abc++)
+					{
+					putchar (abc);
+					}
+			putchar ('\n');
+			return (0);
 		}
-		putchar ('\n');
-		return (0);
 	}
-}
