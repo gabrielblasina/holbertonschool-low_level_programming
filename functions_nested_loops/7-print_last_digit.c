@@ -3,25 +3,16 @@
  * print_last_digit - Entry point
  * Return: 0 (Success)
  * @r: Variable
- * @mod: Variable
+ * @i: Variable
  */
 int print_last_digit(int r)
 {
-	int mod;
-	int ret;
-	int _mod;
+	int i = r % 10;
 
-	if (r >= 0)
+	if (i < 0)
 	{
-		mod = r % 10;
-		ret = '0' + mod;
-		_putchar(ret);
-		return (ret);
+		i = -i;
 	}
-	else
-	{
-		_mod = -(r) % 10;
-		_putchar('0' + _mod);
-		return (_mod);
-	}
+	_putchar('0' + i);
+	return (i);
 }
