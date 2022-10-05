@@ -17,7 +17,7 @@ void print_triangle(int size)
 			{
 				if (y > x)
 				{
-					 _putchar(' ');
+					_putchar(' ');
 				}
 				else if (y <= x)
 				{
