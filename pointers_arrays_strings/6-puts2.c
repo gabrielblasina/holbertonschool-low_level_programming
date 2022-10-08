@@ -4,13 +4,19 @@
  * Return: void
  * @str: variable
 */
+
 void puts2(char *str)
 {
 	int n;
+	int aux;
 
-	for (n = 0 ; str[n] != '\0' ; n += 2)
+	for (n = 0; str[n] != '\0' ; n++)
 	{
-		_putchar(str[n]);
+		aux++;
+	}
+	for (aux = 0 ; str[aux] != '\0' ; aux += 2)
+	{
+		_putchar(str[aux]);
 	}
 	_putchar(10);
 }
