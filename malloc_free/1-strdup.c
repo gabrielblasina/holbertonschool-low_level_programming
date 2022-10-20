@@ -11,11 +11,14 @@ char *_strdup(char *str)
 	char *p2str;
 
 	if (str == NULL)
-		return (str);
+		return (NULL);
 
 	for (i = 0 ; str[i] != '\0' ; i++)
 
 	p2str = malloc(i * sizeof(char));
+	if (p2str == NULL)
+		return (NULL);
+
 	for (x = 0 ; str[x] != '\0' ; x++)
 	{
 		if (x < i)
