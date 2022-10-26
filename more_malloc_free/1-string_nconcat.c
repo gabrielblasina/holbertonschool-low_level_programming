@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include "main.h"
 /**
  * string_nconcat - concatenates n bytes of the second string in the first one
  * Return: NULL (function fails)
@@ -17,19 +18,19 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	for (cont1 = 0 ; s1[cont1] != '\0' ; cont1++)
 		;
-	for (cont2 = 0 ; cont2 < n ; cont2++)
+	for (cont2 = 0 ; cont2 < n && s2[cont2] != '\0' ; cont2++)
 		;
-	pdest = malloc(1 + (cont1 + cont2) * sizeof(char));
+	pdest = malloc((1 + cont1 + cont2) * sizeof(char));
 	if (pdest == NULL)
 		return (NULL);
 	for (cont3 = 0 ; cont3 < cont1 ; cont3++)
 	{
 		pdest[cont3] = s1[cont3];
 	}
-	for (cont4 = 0 ; cont4 < cont2 ; cont4++)
+	for (cont4 = 0 ; (cont3 + cont4) < (cont1 + cont2) ; cont4++)
 	{
-		pdest[cont3] = s2[cont4];
-		cont3++;
+		pdest[cont3 + cont4] = s2[cont4];
 	}
+	pdest[cont1 + cont2] = '\0';
 	return (pdest);
 }
