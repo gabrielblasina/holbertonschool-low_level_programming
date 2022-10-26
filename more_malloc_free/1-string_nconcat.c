@@ -21,7 +21,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		;
 	if (n < cont2)
 		cont2 = n;
-	pdest = malloc((cont1 + cont2 + 1) * sizeof(char));
+	pdest = malloc(1 + (cont1 + cont2) * sizeof(char));
 	if (pdest == NULL)
 		return (NULL);
 	for (cont3 = 0 ; cont3 < cont1 ; cont3++)
