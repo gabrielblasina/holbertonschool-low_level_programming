@@ -27,9 +27,10 @@ void print_all(const char * const format, ...)
 			case 's':
 				str = va_arg(pa, char*);
 				if (str == NULL)
+				{
 					printf("(nil)");
-				else
-					printf("%s", str);
+				}
+				printf("%s", str);
 				break;
 		}
 		if ((format[index] == 'c' || format[index] == 'i' ||
