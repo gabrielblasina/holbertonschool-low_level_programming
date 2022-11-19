@@ -7,10 +7,10 @@ listint_t *add(const int n);
  * @head: pointer to pointer
  * @n: integer
 */
-listint_t *add_nodeint_end(list_t **head, const int n)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	list_t *new_node = NULL;
-	list_t *auxiliar = *head;
+	listint_t *new_node = NULL;
+	listint_t *auxiliar = *head;
 
 	if (!*head)
 	{
@@ -31,9 +31,9 @@ listint_t *add_nodeint_end(list_t **head, const int n)
  * Return: NULL, if fails. Or *head, if success
  * @n: integer
 */
-list_t *add(const int n)
+listint_t *add(const int n)
 {
-	list_t *new_node = NULL;
+	listint_t *new_node = NULL;
 
 	new_node = malloc(sizeof(listint_t));
 	if (new_node == NULL)
