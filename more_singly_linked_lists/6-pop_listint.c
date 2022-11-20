@@ -11,9 +11,9 @@ int pop_listint(listint_t **head)
 
 	if (head == NULL || *head == NULL)
 		return (0);
-		aux_node = (*head)->next;
-		n_cpy = (*head)->n;
-		free(*head);
-		*head = aux_node;
-		return (n_cpy);
+	aux_node = (*head)->next;
+	n_cpy = (*head)->n;
+	free(*head);
+	*head = aux_node;
+	return (n_cpy);
 }
