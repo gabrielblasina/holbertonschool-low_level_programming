@@ -12,7 +12,7 @@ int main(int argc, char **argv)
 	char *buff[1024];
 
 	if (argc > 3)
-		error_list(97, NULL, 0);
+		error_list(97, "", 0);
 	fd1 = open(argv[1], O_RDONLY);
 	if (fd1 == -1)
 		error_list(98, argv[1], 0);
@@ -29,10 +29,10 @@ int main(int argc, char **argv)
 	}
 	close(fd1);
 		if (fd1 == -1)
-			error_list(100, NULL, fd1);
+			error_list(100, "", fd1);
 	close(fd2);
 		if (fd2 == -1)
-			error_list(100, NULL, fd2);
+			error_list(100, "", fd2);
 	return (0);
 }
 /**
