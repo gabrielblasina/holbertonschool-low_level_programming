@@ -27,11 +27,11 @@ int main(int argc, char **argv)
 		if (wr == -1)
 			error_list(99, argv[2], 0);
 	}
-	close(fd1);
-		if (fd1 == -1)
-			error_list(100, "", fd1);
 	close(fd2);
 		if (fd2 == -1)
+			error_list(100, "", fd1);
+	close(fd1);
+		if (fd1 == -1)
 			error_list(100, "", fd2);
 	return (0);
 }
