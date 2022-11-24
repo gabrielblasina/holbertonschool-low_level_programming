@@ -12,16 +12,13 @@ int main(int argc, char **argv)
 	char *buff[1024];
 
 	if (argc > 3)
-	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
-	}
-	fd2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	if (fd2 < 0)
-		error_list(99, argv[2], 0);
+		error_list(97, NULL, 0);
 	fd1 = open(argv[1], O_RDONLY);
 	if (fd1 < 0)
 		error_list(98, argv[1], 0);
+	fd2 = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
+	if (fd2 < 0)
+		error_list(99, argv[2], 0);
 	while ((rd = read(fd1, buff, 1024)) != 0)
 	{
 		if (rd < 0)
