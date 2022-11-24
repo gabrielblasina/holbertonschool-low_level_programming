@@ -8,7 +8,7 @@ void error_list(int errnum, char *str, int fd);
 */
 int main(int argc, char **argv)
 {
-	int fd1, fd2, wr, rd;
+	int fd1 = 0, fd2 = 0, wr = 0, rd = 0;
 	char *buff[1024];
 
 	if (argc > 3)
