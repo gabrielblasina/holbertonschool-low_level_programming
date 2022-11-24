@@ -18,14 +18,20 @@ int main(int argc, char **argv)
 		error_list(98, argv[1], 0);
 	fd2 = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	if (fd2 == -1)
+	{
+		printf("1\n");
 		error_list(99, argv[2], 0);
+	}
 	while ((rd = read(fd1, buff, 1024)) != 0)
 	{
 		if (rd == -1)
 			error_list(98, argv[1], 0);
 		wr = write(fd2, buff, rd);
 		if (wr == -1)
+		{
+			printf("2");
 			error_list(97, argv[2], 0);
+		}
 	}
 	close(fd1);
 		if (fd1 == -1)
