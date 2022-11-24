@@ -17,7 +17,7 @@ int main(int argc, char **argv)
 	if (fd1 == -1)
 		error_list(98, argv[1], 0);
 	fd2 = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
-	if (fd2 < 0)
+	if (fd2 == -1)
 		error_list(99, argv[2], 0);
 	while ((rd = read(fd1, buff, 1024)) != 0)
 	{
