@@ -11,7 +11,7 @@ int main(int argc, char **argv)
 	int fd1 = 0, fd2 = 0, wr = 0, rd = 0;
 	char *buff[1024];
 
-	if (argc > 3)
+	if (argc != 3)
 		error_list(97, "", 0);
 	fd1 = open(argv[1], O_RDONLY);
 	if (fd1 == -1)
